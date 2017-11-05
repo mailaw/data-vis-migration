@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Bird Migration</title>
+    <meta name="description" content="A3 Visualizer">
+    <meta name="author" content="Mailiis Law">
+
+    <!-- Bootstrap CSS stylesheet-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link href="css/styles.css" rel="stylesheet">  
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <!--bootstrap js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+    <!--Table-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <!-- Map-->
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+    <script src="/js/map.js"></script>
+        
+  </head>
+  <body>
+      <div class="row">
+        <h1>Bird Migration Visualizer</h1>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-3">
+            <div id="bird-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="birdp.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="birdp.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="birdp.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="birdp.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="birdp.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="birdp.jpg">
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="col-md-9">
+            <div id="chartdiv"></div>	
+        </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-md-12">
+              <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Common Name</th>
+                        <th>Number</th>
+                        <th>State</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Common Name</th>
+                        <th>Number</th>
+                        <th>State</th>
+                        <th>Date</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+      
+    <!--scripts at bottom to load faster-->
+    <script src="js/scripts.js"></script>
+    
+  </body>
+</html>
