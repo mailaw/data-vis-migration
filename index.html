@@ -49,43 +49,65 @@
             By Mailiis Law
           </div>
           <div class="row article-text">
-            <p>This is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is text </p>
+            <p>Snowy owls are among the largest birds in North America, but scientists know very little about their behavior. The owls spend most of their days far from humans, hunting rodents and birds in the flat expanses of the Arctic Circle. In the winter, the owls move south, but they don't usually reach the United States. Most years, only a few are spotted in the northernmost states — a rare treat for birders. But this winter was different.
+
+            Owls started to appear all over the United States right around Thanksgiving — in Nebraska, in Kentucky — even as far south as Georgia. Dave Brinker, a biologist with the Maryland Department of Natural Resources, was shocked when he saw not one but two snowy owls on a small stretch of Maryland beach.
+
+            "Something huge is going on," Brinker told his colleagues. "We won't see something like this for a long time — probably for the rest of our lifetimes."
+
+            This rapid population boom — called an "irruption" by ecologists — is the largest the East Coast has seen in 40 or 50 years. </p>
           </div>
           <div class="row">
             <div class="col-md-3">
-                <div id="bird-container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/birdp.jpg">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/birdp.jpg">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/birdp.jpg">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/birdp.jpg">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/birdp.jpg">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/birdp.jpg">
-                        </div>
-                    </div>
-                </div>  
+               <div class="profile-container">
+                    <h2>Snowy Owl</h2>
+                    <h3>Bubo Scandiacus</h3>
+                    <img src="assets/snowyProfile.jpg"> 
+                    <p>Info about Snowy Owls</p>
+               </div>
             </div>
             <div class="col-md-9">
                 <!--div id="chartdiv"></div-->	
                 <!--div id="mapDiv"></div-->
-                <div id="plotMap" style="width:600px;height:250px;"></div>
+                <div id="pointDiv"></div>
             
             </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <div id="pointDiv2">
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+               <div id="bird-container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/birdp.jpg">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="assets/birdp.jpg">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/birdp.jpg">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="assets/birdp.jpg">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/birdp.jpg">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="assets/birdp.jpg">
+                            </div>
+                        </div>
+                    </div>  
+              </div>
           </div>
 
           <div class="row">
@@ -109,52 +131,12 @@
                     </tfoot>
                 </table>
             </div>
+          </div>
         </div>
-    </div>
     <!--scripts at bottom to load faster-->
     <script src="js/scripts.js"></script>
       
-    <script>
-        Plotly.d3.json('https://raw.githubusercontent.com/plotly/datasets/master/florida-red-data.json', function(redjson) {
-          Plotly.d3.json('https://raw.githubusercontent.com/plotly/datasets/master/florida-blue-data.json', function(bluejson) {
 
-            Plotly.newPlot("countyMap", [{
-              type: 'scattermapbox',
-              lat: [46],
-              lon: [-74]
-            }], {
-              title: "Florida Counties",
-              height: 600,
-              width: 600,
-              mapbox: {
-                center: {
-                  lat: 27.2,
-                  lon: -84
-                },
-                style: 'light',
-                zoom: 5,
-                layers: [
-                  {
-                    sourcetype: 'geojson',
-                    source: redjson,
-                    type: 'fill',
-                    color: 'rgba(163,22,19,0.8)'
-                  },
-                  {
-                    sourcetype: 'geojson',
-                    source: bluejson,
-                    type: 'fill',
-                    color: 'rgba(40,0,113,0.8)'
-                  },        
-                ]
-              }
-            }, {
-              mapboxAccessToken: 'pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiRy1GV1FoNCJ9.yUPu7qwD_Eqf_gKNzDrrCQ'
-            });
-        });
-    });  
-
-    </script>  
       
     <!--map heat -->
     <script>
@@ -215,7 +197,7 @@
            var count = unpack(rows, 'OBSERVATION COUNT');
            var startLongitude = unpack(rows, 'LATITUDE');
            var endLongitude = unpack(rows, 'LONGITUDE');
-           var startLat = u  npack(rows, 'start_lat');
+           var startLat = unpack(rows, 'start_lat');
            var endLat = unpack(rows, 'end_lat');
 
            for ( var i = 0 ; i < count.length; i++ ) {
@@ -253,84 +235,166 @@
         Plotly.plot(mapDiv, data, layout, {showLink: false});
         });
     </script>
+      
+      
     <!--point map-->
     <script>
-      Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_precipitation.csv', function(err, rows){
+      Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/snowyowlPointData14-17.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
 
-     scl = [[0, 'rgb(150,0,90)'],[0.125, 'rgb(0, 0, 200)'],[0.25,'rgb(0, 25, 255)'],[0.375,'rgb(0, 152, 255)'],[0.5,'rgb(44, 255, 150)'],[0.625,'rgb(151, 255, 0)'],[0.75,'rgb(255, 234, 0)'],[0.875,'rgb(255, 111, 0)'],[1,'rgb(255, 0, 0)']];
-
-      console.log(unpack(rows, 'Globvalue'));
+    //scl = [[0, 'rgb(0, 25, 255)'],[0.25,'rgb(0, 152, 255)'],[0.5,'rgb(255, 0, 0)'],[0.75,'rgb(255,51,153)'],[1,'rgb(102,102,255)']];
+      scl = [[0, 'rgb(85,133,181)'],[0.25,'rgb(85,133,181)'],[0.5,'rgb(227, 39, 63)'],[0.75,'rgb(227, 39, 63)'],[1,'rgb(85,133,181)']];
+      console.log(unpack(rows, 'MONTH'));
 
         var data = [{
             type: 'scattergeo',
             mode: 'markers',
-            text: unpack(rows, 'Globvalue'),
-            lon: unpack(rows, 'Lon'),
-            lat: unpack(rows, 'Lat'),
+            text: unpack(rows, 'MONTH'),
+            lon: unpack(rows, 'LONGITUDE'),
+            lat: unpack(rows, 'LATITUDE'),
             marker: {
-              color: unpack(rows, 'Globvalue'),
+              color: unpack(rows, 'MONTH'),
               colorscale: scl,
-              cmin: 0,
-              cmax: 1.4,
+              cmin: 1,
+              cmax: 12,
               reversescale: true,
-              opacity: 0.2,
-              size: 2,
+              opacity: 0.1,
+              size: 5,
               colorbar:{
                 thickness: 10,
                 titleside: 'right',
                 outlinecolor: 'rgba(68,68,68,0)',
                 ticks: 'outside',
-                ticklen: 3,
+                ticklen: 3, //3
                 shoticksuffix: 'last',
-                ticksuffix: 'inches',
-                dtick: 0.1
+                ticksuffix: 'months',
+                dtick: 1 //0.1
               }
             },
-            name: 'NA Precipitation'
+            name: 'Snowy Owl Data'
         }];
 
         var layout = {
           geo:{
             scope: 'north america',
             showland: true,
-            landcolor: 'rgb(212,212,212)',
-            subunitcolor: 'rgb(255,255,255)',
+            landcolor: 'rgb(241,241,229)', //212,212,212
+            subunitcolor: 'rgb(234,236,223)', //255,255,255
             countrycolor: 'rgb(255,255,255)',
             showlakes: true,
-            lakecolor: 'rgb(255,255,255)',
+            lakecolor: 'rgb(216,231,231)', //255,255,255
             showsubunits: true,
             showcountries: true,
             resolution: 50,
             projection: {
               type: 'conic conformal',
               rotation: {
-                long: -100
+                long: -50
               }
             },
             lonaxis: {
-              showgrid: true,
+              showgrid: false,
               gridwidth: 0.5,
-              range: [ -140.0, -55.0 ],
+              range: [ -130.0, -70.0 ],
               dtick: 5
             },
             lataxis: {
-              showgrid: true,
+              showgrid: false,
               gridwidth: 0.5,
-              range: [ 20.0, 60.0 ],
+              range: [ 25.0, 50.0 ],
               dtick: 5
             },
           },
 
-          title: 'North America Precipitation',
-          width: 600,
+          title: 'Snowy Owl Distribution from 2014 to 2017',
+          width: 900,
           height: 600
         };
-
+          
         Plotly.newPlot('pointDiv', data, layout);
       });  
     </script>
+      
+    <script>
+      Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/snowyowlPointData10-13.csv', function(err, rows){
+      function unpack(rows, key) {
+          return rows.map(function(row) { return row[key]; });
+      }
+
+    //scl = [[0, 'rgb(0, 25, 255)'],[0.25,'rgb(0, 152, 255)'],[0.5,'rgb(255, 0, 0)'],[0.75,'rgb(255,51,153)'],[1,'rgb(102,102,255)']];
+      scl = [[0, 'rgb(85,133,181)'],[0.25,'rgb(85,133,181)'],[0.5,'rgb(227, 39, 63)'],[0.75,'rgb(227, 39, 63)'],[1,'rgb(85,133,181)']];
+      console.log(unpack(rows, 'MONTH'));
+
+        var data = [{
+            type: 'scattergeo',
+            mode: 'markers',
+            text: unpack(rows, 'MONTH'),
+            lon: unpack(rows, 'LONGITUDE'),
+            lat: unpack(rows, 'LATITUDE'),
+            marker: {
+              color: unpack(rows, 'MONTH'),
+              colorscale: scl,
+              cmin: 1,
+              cmax: 12,
+              reversescale: true,
+              opacity: 0.1,
+              size: 5,
+              colorbar:{
+                thickness: 10,
+                titleside: 'right',
+                outlinecolor: 'rgba(68,68,68,0)',
+                ticks: 'outside',
+                ticklen: 3, //3
+                shoticksuffix: 'last',
+                ticksuffix: 'months',
+                dtick: 1 //0.1
+              }
+            },
+            name: 'Snowy Owl Data'
+        }];
+
+        var layout = {
+          geo:{
+            scope: 'north america',
+            showland: true,
+            landcolor: 'rgb(241,241,229)', //212,212,212
+            subunitcolor: 'rgb(234,236,223)', //255,255,255
+            countrycolor: 'rgb(255,255,255)',
+            showlakes: true,
+            lakecolor: 'rgb(216,231,231)', //255,255,255
+            showsubunits: true,
+            showcountries: true,
+            resolution: 50,
+            projection: {
+              type: 'conic conformal',
+              rotation: {
+                long: -50
+              }
+            },
+            lonaxis: {
+              showgrid: false,
+              gridwidth: 0.5,
+              range: [ -130.0, -70.0 ],
+              dtick: 5
+            },
+            lataxis: {
+              showgrid: false,
+              gridwidth: 0.5,
+              range: [ 25.0, 50.0 ],
+              dtick: 5
+            },
+          },
+
+          title: 'Snowy Owl Distribution from 2010 to 2013',
+          width: 900,
+          height: 600
+        };
+          
+        Plotly.newPlot('pointDiv2', data, layout);
+      });  
+    </script>
+          
   </body>
 </html>
