@@ -7,12 +7,18 @@ body {
     
     font: normal 14px "FranklinITCProLight","HelveticaNeue","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 }
-
+.center-content{
+    text-align: center;
+    margin: auto;
+}
+.center-content h3{
+    text-align: left;
+}
 h1{
-    font-size: 48px;
+    font-size: 2.667em;
     line-height: 1.1em;
     word-spacing: -.02em;
-    font: normal bold 48px "PostioniWide",Georgia,serif;
+    font: normal bold 48px "PostioniWide",'Georgia',serif;
     color: #2a2a2a;
     margin: 0.67em 0;
     display: inline-block;
@@ -20,15 +26,32 @@ h1{
     width: 80%;
 }
 p{
+    display: inline-block;
     font-size: 18px;
-    line-height: 1.8em;
+    line-height: 1.7em;
     margin-bottom: 18px;
+    font-family: 'Georgia',serif;
 }
-
+h2, h3, h4{
+    font-family: sans-serif;
+    line-height: 16px;
+    color: #6e6e6e;
+    font-size: 15px;
+    line-height: 1.25em;
+    
+}
 #bioline{
     font-family: "FranklinITCProBold",sans-serif;
     display: inline-block;
     padding-right: 5px;
+    font-weight: 700;
+    
+}
+
+#main-pic img{
+    width: 80%;
+    height: auto;
+    
     
 }
 .article-body{
@@ -42,7 +65,17 @@ p{
 .article-text{
     line-height: 30px;
     width: 80%;
-    text-align: left;
+    padding: 20px;
+}
+.article-img img{
+    width: 300px;
+    height: auto;
+}
+.side-text{
+    
+}
+.right-text{
+    margin-left: 50px;
 }
 #chartdiv {
   width: 100%;
@@ -50,7 +83,12 @@ p{
   float: right;
   padding-right: 30px;
 }
-
+#pointDiv2{
+    float: right;
+    padding-right: 0px;
+    margin-right: 0px;
+    width: 100%;
+}
 .profile-container img{
     width: 150px;
     display: inline-block;
@@ -92,14 +130,18 @@ td{
 #la-header{
     background-image: url(/assets/latimes.png);
     background-position: left;
+    background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
+    height: 60px;
     padding: 0px;
     margin: 0px;
+    background-color: #1E1E1E;
 }
 
 .header-container{
     color: #1e1e1e;
     height: 100px;
     width: cover; 
+    margin-top: 0px;
+    padding: 0px;
 }
