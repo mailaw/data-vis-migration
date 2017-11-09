@@ -23,6 +23,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- Map>
     <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
     <script src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
@@ -39,69 +41,296 @@
   </head>
   <body>
       <div class="row header-container" id="la-header"></div>
-      <div class="row">
-        <h1>Bird Migration Visualizer</h1>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-3">
-            <div id="bird-container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/birdp.jpg">
+      <div class="article-body">
+          <div class="row border-bottom">
+            <h1>Bird migration patterns over the years reveal </h1>
+          </div>
+          <div id="bioline">
+            By Mailiis Law
+          </div>
+          <div class="row article-text">
+            <p>This is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is textThis is text </p>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+                <div id="bird-container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/birdp.jpg">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/birdp.jpg">
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <img src="assets/birdp.jpg">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/birdp.jpg">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/birdp.jpg">
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/birdp.jpg">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/birdp.jpg">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/birdp.jpg">
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <img src="assets/birdp.jpg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/birdp.jpg">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="assets/birdp.jpg">
-                    </div>
-                </div>
-            </div>  
-        </div>
-        <div class="col-md-9">
-            <div id="chartdiv"></div>	
-        </div>
-      </div>
-      
-      <div class="row">
-          <div class="col-md-12">
-              <table id="example" class="display" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>Common Name</th>
-                        <th>Number</th>
-                        <th>State</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>Common Name</th>
-                        <th>Number</th>
-                        <th>State</th>
-                        <th>Date</th>
-                    </tr>
-                </tfoot>
-            </table>
+                </div>  
+            </div>
+            <div class="col-md-9">
+                <!--div id="chartdiv"></div-->	
+                <!--div id="mapDiv"></div-->
+                <div id="plotMap" style="width:600px;height:250px;"></div>
+            
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-12">
+                  <table id="example" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Common Name</th>
+                            <th>Number</th>
+                            <th>State</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Common Name</th>
+                            <th>Number</th>
+                            <th>State</th>
+                            <th>Date</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </div>
-      
     <!--scripts at bottom to load faster-->
     <script src="js/scripts.js"></script>
-    
+      
+    <script>
+        Plotly.d3.json('https://raw.githubusercontent.com/plotly/datasets/master/florida-red-data.json', function(redjson) {
+          Plotly.d3.json('https://raw.githubusercontent.com/plotly/datasets/master/florida-blue-data.json', function(bluejson) {
+
+            Plotly.newPlot("countyMap", [{
+              type: 'scattermapbox',
+              lat: [46],
+              lon: [-74]
+            }], {
+              title: "Florida Counties",
+              height: 600,
+              width: 600,
+              mapbox: {
+                center: {
+                  lat: 27.2,
+                  lon: -84
+                },
+                style: 'light',
+                zoom: 5,
+                layers: [
+                  {
+                    sourcetype: 'geojson',
+                    source: redjson,
+                    type: 'fill',
+                    color: 'rgba(163,22,19,0.8)'
+                  },
+                  {
+                    sourcetype: 'geojson',
+                    source: bluejson,
+                    type: 'fill',
+                    color: 'rgba(40,0,113,0.8)'
+                  },        
+                ]
+              }
+            }, {
+              mapboxAccessToken: 'pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiRy1GV1FoNCJ9.yUPu7qwD_Eqf_gKNzDrrCQ'
+            });
+        });
+    });  
+
+    </script>  
+      
+    <!--map heat -->
+    <script>
+      
+        Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
+          function unpack(rows, key) {
+              return rows.map(function(row) { return row[key]; });
+          }
+
+        var data = [{
+                  type: 'choropleth',
+                  locationmode: 'USA-states',
+                  locations: unpack(rows, 'code'),
+                  z: unpack(rows, 'total exports'),
+                  text: unpack(rows, 'state'),
+                  zmin: 0,
+                  zmax: 17000,
+                  colorscale: [
+                    [0, 'rgb(242,240,247)'], [0.2, 'rgb(218,218,235)'],
+                    [0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],
+                    [0.8, 'rgb(117,107,177)'], [1, 'rgb(84,39,143)']
+                  ],
+                colorbar: {
+                  title: 'Millions USD',
+                  thickness: 0.2
+                },
+                marker: {
+                  line:{
+                    color: 'rgb(255,255,255)',
+                    width: 2
+                  }
+                }
+              }];
+
+        console.log(data.locations);
+          var layout = {
+                  title: '2011 US Agriculture Exports by State',
+                  geo:{
+                    scope: 'usa',
+                    showlakes: true,
+                    lakecolor: 'rgb(255,255,255)'
+                  }
+              };
+              Plotly.plot(myDiv, data, layout, {showLink: false});
+          });
+    </script>
+      
+    <script>
+        Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/snowyowlData.csv', function(err, rows){
+          function unpack(rows, key) {
+            return rows.map(function(row) { return row[key]; });}
+
+          function getMaxOfArray(numArray) {
+            return Math.max.apply(null, numArray);
+          }
+
+           var data = [];
+           var count = unpack(rows, 'OBSERVATION COUNT');
+           var startLongitude = unpack(rows, 'LATITUDE');
+           var endLongitude = unpack(rows, 'LONGITUDE');
+           var startLat = u  npack(rows, 'start_lat');
+           var endLat = unpack(rows, 'end_lat');
+
+           for ( var i = 0 ; i < count.length; i++ ) {
+             var opacityValue = count[i]/getMaxOfArray(count);
+             var result2 = {
+              type: 'scattergeo',
+              locationmode: 'USA-states',
+              lon: [ startLongitude[i] , endLongitude[i] ],
+              lat: [ startLat[i] , endLat[i] ],
+              mode: 'lines',
+              line: {
+                width: 1,
+                color: 'red'
+              },
+            opacity: opacityValue
+            };
+            data.push(result2);
+
+           };
+
+        var layout = {
+              title: 'Feb. 2011 American Airline flight paths',
+              showlegend: false,
+              geo:{
+                scope: 'north america',
+                projection: {
+                  type: 'azimuthal equal area'
+                },
+                showland: true,
+                landcolor: 'rgb(243,243,243)',
+                countrycolor: 'rgb(204,204,204)'
+              }
+            };
+
+        Plotly.plot(mapDiv, data, layout, {showLink: false});
+        });
+    </script>
+    <!--point map-->
+    <script>
+      Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_precipitation.csv', function(err, rows){
+      function unpack(rows, key) {
+          return rows.map(function(row) { return row[key]; });
+      }
+
+     scl = [[0, 'rgb(150,0,90)'],[0.125, 'rgb(0, 0, 200)'],[0.25,'rgb(0, 25, 255)'],[0.375,'rgb(0, 152, 255)'],[0.5,'rgb(44, 255, 150)'],[0.625,'rgb(151, 255, 0)'],[0.75,'rgb(255, 234, 0)'],[0.875,'rgb(255, 111, 0)'],[1,'rgb(255, 0, 0)']];
+
+      console.log(unpack(rows, 'Globvalue'));
+
+        var data = [{
+            type: 'scattergeo',
+            mode: 'markers',
+            text: unpack(rows, 'Globvalue'),
+            lon: unpack(rows, 'Lon'),
+            lat: unpack(rows, 'Lat'),
+            marker: {
+              color: unpack(rows, 'Globvalue'),
+              colorscale: scl,
+              cmin: 0,
+              cmax: 1.4,
+              reversescale: true,
+              opacity: 0.2,
+              size: 2,
+              colorbar:{
+                thickness: 10,
+                titleside: 'right',
+                outlinecolor: 'rgba(68,68,68,0)',
+                ticks: 'outside',
+                ticklen: 3,
+                shoticksuffix: 'last',
+                ticksuffix: 'inches',
+                dtick: 0.1
+              }
+            },
+            name: 'NA Precipitation'
+        }];
+
+        var layout = {
+          geo:{
+            scope: 'north america',
+            showland: true,
+            landcolor: 'rgb(212,212,212)',
+            subunitcolor: 'rgb(255,255,255)',
+            countrycolor: 'rgb(255,255,255)',
+            showlakes: true,
+            lakecolor: 'rgb(255,255,255)',
+            showsubunits: true,
+            showcountries: true,
+            resolution: 50,
+            projection: {
+              type: 'conic conformal',
+              rotation: {
+                long: -100
+              }
+            },
+            lonaxis: {
+              showgrid: true,
+              gridwidth: 0.5,
+              range: [ -140.0, -55.0 ],
+              dtick: 5
+            },
+            lataxis: {
+              showgrid: true,
+              gridwidth: 0.5,
+              range: [ 20.0, 60.0 ],
+              dtick: 5
+            },
+          },
+
+          title: 'North America Precipitation',
+          width: 600,
+          height: 600
+        };
+
+        Plotly.newPlot('pointDiv', data, layout);
+      });  
+    </script>
   </body>
 </html>
