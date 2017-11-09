@@ -4,11 +4,45 @@ body {
     color: black;
     margin-top: 0px;
     padding-top: 0px;
+    
+    font: normal 14px "FranklinITCProLight","HelveticaNeue","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 }
 
 h1{
-    font-size: 70px;
-    margin: 30px;
+    font-size: 48px;
+    line-height: 1.1em;
+    word-spacing: -.02em;
+    font: normal bold 48px "PostioniWide",Georgia,serif;
+    color: #2a2a2a;
+    margin: 0.67em 0;
+    display: inline-block;
+    border-bottom: 1px solid #c7c4c4c4;
+    width: 80%;
+}
+p{
+    font-size: 18px;
+    line-height: 1.8em;
+    margin-bottom: 18px;
+}
+
+#bioline{
+    font-family: "FranklinITCProBold",sans-serif;
+    display: inline-block;
+    padding-right: 5px;
+    
+}
+.article-body{
+    margin: 100px;
+    margin-top: 20px;
+    color: #111;
+    text-shadow: 0 1px 0 #fff;
+    position: relative;
+    overflow: visible;
+}
+.article-text{
+    line-height: 30px;
+    width: 80%;
+    text-align: left;
 }
 #chartdiv {
   width: 100%;
@@ -17,6 +51,14 @@ h1{
   padding-right: 30px;
 }
 
+.profile-container img{
+    width: 150px;
+    display: inline-block;
+    height: auto;
+    padding: auto;
+    
+    
+}
 #bird-container{
     border-radius: 2px;
     border-style: solid;
