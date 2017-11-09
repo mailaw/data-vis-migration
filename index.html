@@ -42,7 +42,7 @@
                 <h1>Snowy Owl's spread across the nation </h1>
               </div>
               <div id="main-pic">
-                <img src="/assets/gary-bendig-185238.jpg">
+                <img src="http://mailiislaw.com/mj487/data-vis-project/assets/Screen%20Shot%202017-11-09%20at%207.14.15%20AM.png">
                 <h4>A snowy owl sits in a tundra-like environment, one they are often drawn to. (Photo: Gary Bendig/Unsplash)</h4>
               </div>
               <div id="bioline">
@@ -88,14 +88,14 @@
               </div>
               
               <div class="row">
-                  <div class="col-md-3 col-sm-4">
+                  <div class="col-md-4">
                       <div class="article-img">
-                        <img src="/assets/jakob-puff-429487.jpg">
+                        <img src="http://mailiislaw.com/mj487/data-vis-project/assets/Screen%20Shot%202017-11-09%20at%207.15.05%20AM.png">
                         <h4>Photo by Jakob Puff on Unsplash</h4>
                       </div>
                   </div>
-                  <div class="col-md-9 col-sm-4">
-                    <div class="right-text">
+                  <div class="col-md-8">
+                    <div class="container right-text">
                         <p>Below you can view the data table that was used to make the visualizations above. All of the data was collected through a collective citizen science effort, with the data managed by the Cornell Lab of Ornithology. The following dataset was granted by the Cornell Lab of Ornithology. Visit <a href="ebird.org">ebird.org</a> to see more data and submit your own observations. The data in this article relies on the citizens who reported their sightings, and the integrity of their recordings.  </p>
                       </div>
                   </div>
@@ -133,13 +133,14 @@
                     </table>
                 </div>
             </div>
+      </div>
     <!--scripts at bottom to load faster-->
     <script src="js/scripts.js"></script>
       
 
       
     <!--map heat -->
-    <script>
+    <script> /*
       
         Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/pabuTotals10-11.csv', function(err, rows){
           function unpack(rows, key) {
@@ -181,7 +182,7 @@
                   }
               };
               Plotly.plot(buntingChoro, data, layout, {showLink: false});
-          });
+          }); */
     </script>
       
     <script>
@@ -309,7 +310,7 @@
           },
 
           title: 'Snowy Owl Movement by Month from 2014 to 2017',
-          width: 900,
+          width: 700,
           height: 600
         };
           
@@ -388,7 +389,7 @@
           },
 
           title: 'Snowy Owl Movement by Month from 2010 to 2013',
-          width: 900,
+          width: 700,
           height: 600
         };
           
