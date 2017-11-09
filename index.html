@@ -33,105 +33,131 @@
     <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
     <script src="/js/map.js"></script-->
         
-    <!--Highcharts map-->
-    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
-    <script src="http://code.highcharts.com/mapdata/countries/us/us-all.geo.json"></script>
-
 
   </head>
   <body>
       <div class="row header-container" id="la-header"></div>
-      <div class="article-body">
-          <div class="row border-bottom">
-            <h1>Bird migration patterns over the years reveal </h1>
-          </div>
-          <div id="bioline">
-            By Mailiis Law
-          </div>
-          <div class="row article-text">
-            <p>Snowy owls are among the largest birds in North America, but scientists know very little about their behavior. The owls spend most of their days far from humans, hunting rodents and birds in the flat expanses of the Arctic Circle. In the winter, the owls move south, but they don't usually reach the United States. Most years, only a few are spotted in the northernmost states — a rare treat for birders. But this winter was different.
+          <div class="article-body">
+              <div class="row border-bottom">
+                <h1>Bird migration patterns over the years reveal </h1>
+              </div>
+              <div id="bioline">
+                By Mailiis Law
+              </div>
+              <div class="row article-text">
+                <p>Snowy owls are among the largest birds in North America, but scientists know very little about their behavior. The owls spend most of their days far from humans, hunting rodents and birds in the flat expanses of the Arctic Circle. In the winter, the owls move south, but they don't usually reach the United States. Most years, only a few are spotted in the northernmost states — a rare treat for birders. But this winter was different.
 
-            Owls started to appear all over the United States right around Thanksgiving — in Nebraska, in Kentucky — even as far south as Georgia. Dave Brinker, a biologist with the Maryland Department of Natural Resources, was shocked when he saw not one but two snowy owls on a small stretch of Maryland beach.
+                Owls started to appear all over the United States right around Thanksgiving — in Nebraska, in Kentucky — even as far south as Georgia. Dave Brinker, a biologist with the Maryland Department of Natural Resources, was shocked when he saw not one but two snowy owls on a small stretch of Maryland beach.
 
-            "Something huge is going on," Brinker told his colleagues. "We won't see something like this for a long time — probably for the rest of our lifetimes."
+                "Something huge is going on," Brinker told his colleagues. "We won't see something like this for a long time — probably for the rest of our lifetimes."
 
-            This rapid population boom — called an "irruption" by ecologists — is the largest the East Coast has seen in 40 or 50 years. </p>
-          </div>
-          <div class="row">
-            <div class="col-md-3">
-               <div class="profile-container">
-                    <h2>Snowy Owl</h2>
-                    <h3>Bubo Scandiacus</h3>
-                    <img src="assets/snowyProfile.jpg"> 
-                    <p>Info about Snowy Owls</p>
-               </div>
-            </div>
-            <div class="col-md-9">
-                <!--div id="chartdiv"></div-->	
-                <!--div id="mapDiv"></div-->
-                <div id="pointDiv"></div>
-            
-            </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                <div id="pointDiv2">
+                This rapid population boom — called an "irruption" by ecologists — is the largest the East Coast has seen in 40 or 50 years. </p>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                   <div class="profile-container">
+                        <h2>Snowy Owl</h2>
+                        <h3>Bubo Scandiacus</h3>
+                        <img src="assets/snowyProfile.jpg"> 
+                        <p>Info about Snowy Owls</p>
+                   </div>
+                </div>
+                <div class="col-md-9">
+                    <!--div id="chartdiv"></div-->	
+                    <!--div id="mapDiv"></div-->
+                    <div id="pointDiv"></div>
+
                 </div>
               </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">
-               <div id="bird-container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="assets/birdp.jpg">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="assets/birdp.jpg">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="assets/birdp.jpg">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="assets/birdp.jpg">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="assets/birdp.jpg">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="assets/birdp.jpg">
-                            </div>
-                        </div>
-                    </div>  
+              <div class="row">
+                  <div class="col-md-12">
+                    <div id="pointDiv2">
+                    </div>
+                  </div>
               </div>
-          </div>
+              <div class="row">
+                <div class="col-md-3">
+                   <div id="bird-container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="assets/birdp.jpg">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="assets/birdp.jpg">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="assets/birdp.jpg">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="assets/birdp.jpg">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="assets/birdp.jpg">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="assets/birdp.jpg">
+                                </div>
+                            </div>
+                        </div>  
+                  </div>
+              </div>
 
-          <div class="row">
-              <div class="col-md-12">
-                  <table id="example" class="display" cellspacing="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th>Common Name</th>
-                            <th>Number</th>
-                            <th>State</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Common Name</th>
-                            <th>Number</th>
-                            <th>State</th>
-                            <th>Date</th>
-                        </tr>
-                    </tfoot>
-                </table>
+              
+              <div class="row">
+                  <div class="col-md-12">
+                      <table id="snowyTable" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>COMMON NAME</th>
+                                <th>OBSERVATION COUNT</th>
+                                <th>STATE</th>
+                                <th>LATITUDE</th>
+                                <th>LONGITUDE</th>
+                                <th>OBSERVATION DATE</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>COMMON NAME</th>
+                                <th>OBSERVATION COUNT</th>
+                                <th>STATE</th>
+                                <th>LATITUDE</th>
+                                <th>LONGITUDE</th>
+                                <th>OBSERVATION DATE</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
-          </div>
+              
+              
+              
+              <div class="row">
+                  <div class="col-md-12">
+                      <table id="example" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Common Name</th>
+                                <th>Number</th>
+                                <th>State</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Common Name</th>
+                                <th>Number</th>
+                                <th>State</th>
+                                <th>Date</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
         </div>
     <!--scripts at bottom to load faster-->
     <script src="js/scripts.js"></script>
@@ -141,7 +167,7 @@
     <!--map heat -->
     <script>
       
-        Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
+        Plotly.d3.csv('https://github.com/mailaw/data-vis-migration/blob/master/data/pabuTotals10-11.csv', function(err, rows){
           function unpack(rows, key) {
               return rows.map(function(row) { return row[key]; });
           }
@@ -149,8 +175,8 @@
         var data = [{
                   type: 'choropleth',
                   locationmode: 'USA-states',
-                  locations: unpack(rows, 'code'),
-                  z: unpack(rows, 'total exports'),
+                  locations: unpack(rows, 'CODE'),
+                  z: unpack(rows, 'TOTAL'),
                   text: unpack(rows, 'state'),
                   zmin: 0,
                   zmax: 17000,
@@ -239,7 +265,7 @@
       
     <!--point map-->
     <script>
-      Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/snowyowlPointData14-17.csv', function(err, rows){
+      Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/snowyowlData14-17.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
@@ -318,7 +344,7 @@
     </script>
       
     <script>
-      Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/snowyowlPointData10-13.csv', function(err, rows){
+      Plotly.d3.csv('https://raw.githubusercontent.com/mailaw/data-vis-migration/master/data/snowyowlData10-13.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
