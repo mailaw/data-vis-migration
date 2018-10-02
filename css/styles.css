@@ -1,74 +1,70 @@
-
-body { 
-    background-color: #ffffff;
-    color: black;
-    margin-top: 0px;
-    padding-top: 0px;
+body {
+  background-color: #ffffff;
+  color: black;
+  margin-top: 0px;
+  padding-top: 0px;
 }
-.center-content{
-    text-align: center;
-    margin: auto;
-}
-
-h1{
-    font-size: 2.667em;
-    line-height: 1.1em;
-    word-spacing: -.02em;
-    font: normal bold 48px "PostioniWide",'Georgia',serif;
-    color: #2a2a2a;
-    margin: 0.67em 0;
-    display: inline-block;
-    border-bottom: 1px solid #c7c4c4c4;
-    width: 80%;
-}
-.row p{
-    display: inline-block;
-    font-size: 18px;
-    line-height: 1.7em;
-    margin-bottom: 18px;
-    font-family: 'Georgia',serif;
-}
-h2, h3, h4{
-    font-family: sans-serif;
-    line-height: 16px;
-    color: #6e6e6e;
-    font-size: 15px;
-    line-height: 1.25em;
-    
-}
-#bioline{
-    font-family: "FranklinITCProBold",sans-serif;
-    display: inline-block;
-    padding-right: 5px;
-    font-weight: 700;
-    
+.center-content {
+  text-align: center;
+  margin: auto;
 }
 
-#main-pic img{
-    width: 80%;
-    height: auto;
-    
-    
+h1 {
+  font-size: 2.667em;
+  line-height: 1.1em;
+  word-spacing: -0.02em;
+  font: normal bold 48px "PostioniWide", "Georgia", serif;
+  color: #2a2a2a;
+  margin: 0.67em 0;
+  display: inline-block;
+  border-bottom: 1px solid #c7c4c4c4;
+  width: 80%;
 }
-.article-body{
-    margin: 100px;
-    margin-top: 20px;
-    color: #111;
-    text-shadow: 0 1px 0 #fff;
-    position: relative;
-    overflow: visible;
+.row p {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.7em;
+  margin-bottom: 18px;
+  font-family: "Georgia", serif;
 }
-.article-text{
-    line-height: 30px;
-    width: 80%;
-    padding: 20px;
+h2,
+h3,
+h4 {
+  font-family: sans-serif;
+  line-height: 16px;
+  color: #6e6e6e;
+  font-size: 15px;
+  line-height: 1.25em;
 }
-.article-img img{
-    width: 300px;
-    height: auto;
+#bioline {
+  font-family: "FranklinITCProBold", sans-serif;
+  display: inline-block;
+  padding-right: 5px;
+  font-weight: 700;
 }
-.side-text{
-    
+
+#main-pic img {
+  width: 80%;
+  height: auto;
+}
+.article-body {
+  margin: 100px;
+  margin-top: 20px;
+  color: #111;
+  text-shadow: 0 1px 0 #fff;
+  position: relative;
+  overflow: visible;
+}
+.article-text {
+  line-height: 30px;
+  width: 80%;
+  padding: 20px;
+}
+.article-img img {
+  width: 300px;
+  height: auto;
+}
+.side-text {
 }
 
 #chartdiv {
@@ -77,62 +73,57 @@ h2, h3, h4{
   float: right;
   padding-right: 30px;
 }
-#pointDiv2{    
-
+#pointDiv2 {
 }
-.profile-container img{
-    width: 150px;
-    display: inline-block;
-    height: auto;
-    padding: auto;
-    
-    
+.profile-container img {
+  width: 150px;
+  display: inline-block;
+  height: auto;
+  padding: auto;
 }
-#bird-container{
-    border-radius: 2px;
-    border-style: solid;
-    border-color: whitesmoke;
-    padding: 10px;
-    width: 350px;
+#bird-container {
+  border-radius: 2px;
+  border-style: solid;
+  border-color: whitesmoke;
+  padding: 10px;
+  width: 350px;
 }
 
-#bird-container .row{
-    padding: 15px;
-    align-content: center;
+#bird-container .row {
+  padding: 15px;
+  align-content: center;
 }
-#bird-container .col-md-4{
-    margin-left: 25px;
+#bird-container .col-md-4 {
+  margin-left: 25px;
 }
-#bird-container img{
-    border-radius: 50%;
-    height: 100px;
-    width: auto;
-    margin: 20 10px;
-    
-}
-
-td{
-    color: black;
+#bird-container img {
+  border-radius: 50%;
+  height: 100px;
+  width: auto;
+  margin: 20 10px;
 }
 
+td {
+  color: black;
+}
 
 /* font family:Harriet, Balto, Alright Sans */
 
-#la-header{
-    background-image: url(http://mailiislaw.com/mj487/data-vis-project/assets/latimes.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 60px;
-    padding: 0px;
-    margin: 0px;
-    background-color: #1E1E1E;
+#la-header {
+  background-image: url(../assets/latimes.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #1e1e1e;
 }
 
-.header-container{
-    color: #1e1e1e;
-    height: 100px;
-    width: cover; 
-    margin-top: 0px;
-    padding: 0px;
+.header-container {
+  color: #1e1e1e;
+  height: 100px;
+  width: cover;
+  margin-top: 0px;
+  padding: 0px;
 }
